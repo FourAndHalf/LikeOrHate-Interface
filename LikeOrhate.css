@@ -1,0 +1,178 @@
+
+body {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.card-groups {
+    margin-top: 25vmin;
+}
+
+.card-groups,
+.card-group,
+.card {
+    aspect-ratio: 5/7;
+}
+
+.card-group,
+.big-photos {
+    width: 30vmin;
+}
+
+.card-group {
+    position: absolute;
+    transform: translate(-20%, -50%);
+    transition: transform 400ms ease;
+}
+
+.card{
+    position: absolute;
+    transition: transform 800ms cubic-bezier(.05,.43,.25,.95);
+    background-size: cover;
+}
+
+.big-photos {
+    border-radius: 1vmin;
+}
+
+.small-photos {
+    width: 12vmin;
+    border-radius: 2vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.small-photos:nth-child(1) {
+    background-image: url(https://images.unsplash.com/photo-1647553678205-f69131443cae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1898&q=80);
+}
+.big-photos:nth-child(2) {
+    transform: translateX(-10%) rotate(-3deg);
+    background-image: url(https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+}
+.small-photos:nth-child(3) {
+    background-image: url(https://images.unsplash.com/photo-1510597026538-da2e86b8588a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2047&q=80);
+}
+.big-photos:nth-child(4) {
+    background-image: url(https://images.unsplash.com/photo-1531174798007-21bff228ce3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80);
+    transform: translateX(5%) rotate(2deg);
+}
+.small-photos:nth-child(5) {
+    background-image: url(https://images.unsplash.com/photo-1568557412763-da2269c2ebb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1934&q=80);
+}
+.big-photos:nth-child(6) {
+    transform: translateX(10%) rotate(5deg);
+    background-image: url(https://images.unsplash.com/photo-1667174203531-d6c08590f0b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+}
+.small-photos:nth-child(7) {
+    background-image: url(https://images.unsplash.com/photo-1665579392398-705cc26d19fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80);
+}
+.big-photos:nth-child(8) {
+    transform: translate(7%, -3%) rotate(-7deg);
+    background-image: url(https://images.unsplash.com/photo-1677782685362-7d54592471d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+}
+
+.card-group[data-index = "1"] > .big-photos:nth-child(8) {
+    background-image: url(https://images.unsplash.com/flagged/photo-1551854716-8b811be39e7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+}
+
+.card-group[data-index = "2"] > .big-photos:nth-child(8) {
+    background-image: url(https://images.unsplash.com/photo-1620366269121-f1213792f014?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+}
+
+.card-group[data-index = "3"] > .big-photos:nth-child(8) {
+    background-image: url(https://images.unsplash.com/photo-1609501676725-7186f017a4b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
+}
+
+.card-group[data-index = "4"] > .big-photos:nth-child(8) {
+    background-image: url(https://images.unsplash.com/photo-1606814893907-c2e42943c91f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+}
+
+.card-group[data-index = "5"] > .big-photos:nth-child(8) {
+    background-image: url(https://images.unsplash.com/photo-1617296538902-887900d9b592?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+}
+
+
+.card-group:hover > .small-photos:nth-child(1) {
+    transform: rotate(15deg) translate(-340%, -160%);
+}
+.card-group:hover > .big-photos:nth-child(2) {
+    transform: translate(-75%) rotate(-25deg);
+}
+.card-group:hover > .small-photos:nth-child(3) {
+    transform: rotate(-15deg) translate(-280%, 80%);
+}
+.card-group:hover > .big-photos:nth-child(4) {
+    transform: translate(-40%) rotate(-17deg);
+}
+.card-group:hover > .small-photos:nth-child(5) {
+    transform: rotate(17deg) translate(150%, 110%);
+}
+.card-group:hover > .big-photos:nth-child(6) {
+    transform: rotate(5deg);
+}
+.card-group:hover > .small-photos:nth-child(7) {
+    transform: rotate(-17deg) translate(190%, -180%);
+}
+.card-group:hover > .big-photos:nth-child(8) {
+    transform: translate(40%) rotate(17deg);
+}
+
+.card-group[data-status = "unknown"] {
+    transform: scale(0);
+}
+
+.card-swiper-buttons {
+    margin-top: 17vmin;
+    display: flex;
+    width: 20vmin;
+    justify-content: space-between;
+    transform: translateX(-10%);
+}
+
+.card-swiper-buttons > button {
+    font-size: 5vmin;
+    border: 0.4vmin solid rgb(200, 200, 200);
+    border-radius: 50%;
+    transform: translateY(-80%);
+    color: white;
+    background-color: transparent;
+    height: 8vmin;
+    width: 8vmin;
+    padding-top: 1vmin;
+    cursor: pointer;
+}
+
+#like-button:active {
+    color: rgb(33, 150, 243);
+    border-color: rgb(33, 150, 243);
+}
+#hate-button:active {
+    color: rgb(140, 0, 0);
+    border-color: rgb(141, 0, 0);
+}
+
+.card-group[data-status="after"] {
+    transform: translate(90%, -50%) scale(0);
+}
+
+.card-group[data-status="become-active-from-before"] {
+    transform: translate(-120%, -50%) scale(0);
+    transition: none;
+}
+
+.card-group[data-status="active"] {
+    transition-delay: 300ms;
+}
+
+.card-group[data-status="before"] {
+    transform: translate(-120%, -50%) scale(0);
+}
+
+.card-group[data-status="become-active-from-after"] {
+    transform: translate(90%, -50%) scale(0);
+    transition: none;
+}
